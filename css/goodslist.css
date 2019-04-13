@@ -1,0 +1,80 @@
+.goods_nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #eee;
+}
+.goods_nav ul {
+  display: flex;
+  align-items: center;
+}
+.goods_nav ul li {
+  margin-right: 10px;
+}
+.goods_nav ul li a {
+  color: black;
+  font-size: 14px;
+}
+.goods_list {
+  background-color: #fff;
+  padding: 10px;
+  display: flex;
+  border-bottom: 1px solid #aaa;
+}
+.goods_list .goodsimg {
+  flex: 1;
+}
+.goods_list .goodsimg img {
+  display: block;
+  width: 100%;
+}
+.goods_list .goods_introduce_content {
+  flex: 3;
+  padding-left: 10px;
+}
+.goods_list .goods_introduce_content .goods_introduce_fonts {
+  color: balck;
+  font-size: 14px;
+}
+.goods_list .goods_introduce_content .good_Price {
+  color: red;
+  font-size: 14px;
+  padding: 3px;
+}
+.goods_list .goods_introduce_content span {
+  color: #333;
+  font-size: 12px;
+}
+.pager {
+  margin: 5px;
+}
+.mui-pager {
+  position: relative;
+}
+.first {
+  position: absolute;
+  top: 0;
+  left: 40px;
+}
+.last {
+  position: absolute;
+  top: 0;
+  right: 40px;
+}
+.turning {
+  position: absolute;
+  top: 33px;
+  left: 39.5%;
+}
+.turning .pagers {
+  width: auto;
+  height: auto;
+  display: block;
+  background-color: #007aff;
+  border: 1px solid #eee;
+  padding: 5px 16px 5px;
+  border-radius: 5px;
+  color: #fff;
+}
+.eleToggle .pagers {
+  display: none;
+}

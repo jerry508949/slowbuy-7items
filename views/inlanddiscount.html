@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>国内折扣商品列表</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../lib/mui/css/mui.css">
+    <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../css/discountlist.css">
+</head>
+
+<body>
+    <div class="layout">
+        <div class="slow_header">
+            <a href="#" class="logo"><img src="../images/header_logo.png" alt=""></a>
+            <a href="#" class="app"><img src="../images/header_app.png" alt=""></a>
+        </div>
+        <div class="slow_content">
+            <ul class="goodsList mui-table-view mui-table-view-chevron" id="list">
+                <!-- <li>
+                    <a href="">
+                        "<img
+                            src="http://img10.360buyimg.com/n7/jfs/t1720/256/513904188/195330/ce31e971/55d2cf3eNc2d117d0.jpg"
+                            alt="西域美农新疆特产五星和田红枣250g*2">"
+                        <div class="proName">西域美农新疆特产五星和田红枣250g*2</div>
+
+                    </a>
+                    <div>19.8元(5件99元)</div>
+                    <span>京东商城|10-22 13:28</span>
+                </li> -->
+            </ul>
+        </div>
+        <div class="slow_footer">
+            <div class="nav">
+                <a href="#">登录</a>
+                <a href="#">注册</a>
+                <a href="#">
+                    <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                    返回顶部
+                </a>
+            </div>
+            <div class="app">
+                <a href="#">手机APP下载</a>
+                <a href="#">慢慢买手机版</a>
+                -- 掌上比价平台
+            </div>
+            <p>m.manmanbuy.com </p>
+        </div>
+    </div>
+
+
+    <script type="text/template" id="goodsListTemp">
+        {{each list value index}}
+        <li>
+            <a href="./discountgoods.html?productid={{value.productId}}">
+                {{@value.productImg}}
+                <div class="proName">{{value.productName}}</div>
+
+            </a>
+            <div>{{value.productPrice}}</div>
+            <span>{{value.productFrom}}|{{value.productTime}}</span>
+        </li>
+        {{/each}}
+    </script>
+    <script src="../lib/mui/js/mui.js"></script>
+    <script src="../lib/mui/js/mui-lazyload.js"></script>
+    <script src="../lib/mui/js/mui-lazyload.img.js"></script>
+    <script src="../lib/zepto/zepto.js"></script>
+    <script src="../lib/arttemplate/template-web.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/discountlist.js"></script>
+    <script>
+       
+    </script>
+</body>
+
+</html>

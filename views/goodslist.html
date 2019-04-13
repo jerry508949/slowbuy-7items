@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品页</title>
+    <link rel="stylesheet" href="../css/base.css"><!-- 初始化样式 -->
+    <link rel="stylesheet" href="../lib/mui/css/muie.css"><!-- mui扩展字体 -->
+    <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.css"><!-- 字体图标 -->
+    <link rel="stylesheet" href="../lib/mui/css/mui.css"><!-- mui插件 -->
+    <link rel="stylesheet" href="../css/common_feng.css">
+    <link rel="stylesheet" href="../css/goodslist.css"><!-- 商品页 -->
+</head>
+
+<body class="eleToggle">
+    <div class="layout">
+        <!-- 头部 -->
+        <div class="header" id='overhead'>
+            <div class="logo"><img src="../images/header_logo.png"></div>
+            <div class="download"><img src="../images/header_app.png"></div>
+        </div>
+        <!-- 搜索框 -->
+        <div class="mui-input-row search">
+            <input type="search" class="mui-input-clear" placeholder="请输入要比价的商品">
+            <button type="button" class="mui-btn mui-btn-warning">搜索</button>
+        </div>
+        <div class="content">
+            <!-- nav导航 -->
+            <div class="goods_nav" id="abc">
+                <ul>
+                    <li><a href="Javascript:;">首页></a></li>
+                    <li><a href="Javascript:;">全部分类></a></li>
+                    <li class="cateName"></li>
+                </ul>
+                <button type="button" class="mui-btn">筛选</button>
+            </div>
+            <div class="goods_listAll">
+                <!-- <div class="goods_list">
+                    <div class="goodsimg">
+                        <img src="../images/gengduo.png" alt="">
+                    </div>
+                    <div class="goods_introduce_content">
+                        <div class="goods_introduce_fonts">创维(Skyworth) 50M5 50英寸 超高清 智能网络LED液晶电视</div>
+                        <div class="good_Price">￥9999</div>
+                        <span>报价(6)</span> <span>评论(2222)</span>
+                    </div>
+                </div> -->
+            </div>
+            <div class="pager">
+                <ul class="mui-pager">
+                    <li class="first">
+                        <a href="#abc">
+                            上一页
+                        </a>
+                    </li>
+                    <li class="mui-active second">
+                        <a href="javascript:;" class="pagerTatal">
+                            <span class="pgs"></span>
+                        </a>
+                    </li>
+                    <div class="turning">
+                        <!-- <div class="pagers p1">第1/3页</div> -->
+                        <!-- <div class="pagers p2">第2/3页</div>
+                        <div class="pagers p3">第3/3页</div> -->
+                    </div>
+                    <li class="last">
+                        <a href="#abc">
+                            下一页
+                        </a>
+                    </li>
+                </ul>
+                </a>
+            </div>
+
+            <!-- 底部 -->
+            <footer>
+                <div class="row">
+                    <div>
+                        <a href="#">登录</a>
+                    </div>
+                    <div>
+                        <a href="#">注册</a>
+                    </div>
+                    <div>
+                        <a href="#abc"><img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部</a>
+                    </div>
+                </div>
+                <p> <a href="overhead" style="color:red">手机APP下载</a> <a href="#">慢慢买手机版</a> -- 掌上比价平台</p>
+                <p>m.manmanbuy.com </p>
+            </footer>
+        </div>
+
+        <!-- 页面渲染 -->
+        <script type="text/template" id="goodsTemp">
+        {{each result value index}}
+        <a class="goods_list" href="goodsDetail.html?categoryId={{value.categoryId}}&productId={{value.productId}}">
+                <div class="goodsimg">
+                    {{@value.productImg}}
+                </div>
+                <div class="goods_introduce_content">
+                    <div class="goods_introduce_fonts">{{value.productName}}</div>
+                    <div class="good_Price">{{value.productPrice}}</div>
+                    <span>{{value.productQuote}}</span> <span>{{value.productCom}}</span>
+                </div>
+            </a>
+            {{/each}}
+    </script>
+        <!-- 头部的nav 商品名字渲染 -->
+        <script type="text/template" id="cateNameTemp">
+        {{each result v i}}
+        <a href="Javascript:;">{{v.category}}></a>
+            {{/each}}
+    </script>
+    <!-- //分页 -->
+    <script type="text/template" id="pageTemp">
+        {{each list value index}}
+        <div class="pagers p{{index+1}}">第{{index+1}}/{{firstNum}} </div><!-- 获取后台传过来的参数 -->
+            {{/each}}
+    </script>
+        <script src="../lib/mui/js/mui.min.js"></script><!-- mui 插件-->
+        <script src="../lib/arttemplate/template-web.js"></script><!-- template模板渲染 -->
+        <script src="../lib/iscroll/iscroll.js"></script><!-- 滚动插件 -->
+        <script src="../lib/zepto/zepto.js"></script><!-- zepto第三方jq -->
+        <script src="../js/common.js"></script><!-- 公用js代码 -->
+        <script src="../js/goodslist.js"></script>
+        <script src="../js/goodslist.js"></script><!-- 商品页 -->
+</body>
+
+</html>

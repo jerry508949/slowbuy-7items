@@ -1,0 +1,30 @@
+.layoyt {
+  padding: 0;
+  margin: 0;
+}
+.content {
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.content .mui-table-view-cell.mui-collapse .mui-collapse-content {
+  padding: 0;
+}
+.content .mui-card {
+  margin: 0;
+}
+.content .categorylist li {
+  display: flex;
+  flex-wrap: wrap;
+}
+.content .categorylist li a {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  width: 33.33%;
+  display: block;
+  text-align: center;
+  color: #333;
+}

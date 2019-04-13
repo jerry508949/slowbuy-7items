@@ -1,0 +1,52 @@
+@import './common_wj.less';
+.slow_content {
+    .media{
+        // height: 120px;
+        .left {
+          float: left;
+          width: 20%;
+          img {
+              width: 100%;
+          }
+        }
+        .right {
+           float: right;
+           width: 80%;
+           padding-left: 50px;
+           >a {
+               color: #666;
+               font-size: 14px;
+           }
+           .media_price {
+               color: red;
+               margin: 10px 0;
+               font-size: 14px;
+           }
+           div:nth-of-type(2){
+               span:nth-of-type(1){
+                   font-size: 14px;
+                  color: #666;
+
+               }
+              span:nth-of-type(2){
+                  float: right;
+                  margin-right: 20px;
+                  font-size: 16px;
+                  color: #666;
+
+              }
+           }
+        }
+    }
+    .pagetotal {
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+   
+    // 分页功能
+    .page {
+        li {
+            float: left;
+        }
+    }
+}

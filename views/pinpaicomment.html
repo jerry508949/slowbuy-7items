@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买品牌</title>
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="../lib/mui/css/muie.css">
+    <link rel="stylesheet" href="../css/pinpaicomment.css">
+
+</head>
+
+<body>
+    <div class="layout">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div class="mmm_header">
+                    <div class="mm_logo"><img src="../images/header_logo.png" alt=""></div>
+                    <div class="appDownload">
+                        <img src="../images/header_app.png" alt="">
+                    </div>
+                </div>
+                <div class="mmm_search">
+                    <div class="mui-input-row mui-search search_text">
+                        <input type="search" class="mui-input-clear" placeholder="请输入商品名称">
+                        <span class="mui-icon mui-icon-search"></span>
+                    </div>
+                    <button type="button" class="mui-btn btn_search">搜索</button>
+                </div>
+                <div class="mmm_nav">
+                    <ul class="navList">
+                        <li><a href="javascript:;">首页 ></a></li>
+                        <li><a href="javascript:;">全部分类 ></a></li>
+                        <li><a href="javascript:;">品牌大全 ></a></li>
+                        <li><button type="button" class="mui-btn btn_search">筛选</button></li>
+                    </ul>
+                </div>
+
+                <div class="mmm_product">
+                    <div class="pro_title">飞利浦(PHILIPS)32PHF3061/T3 32英寸 高清LED液晶电视</div>
+                    <div class="pro_pic"><img
+                            src="http://pro.zuyushop.com:8015/ProPic/20166/Thumb/Thumb_2016060015530027148.png"
+                            alt=""><img src="http://www.zuyushop.com/wap/images/sc.jpg" alt=""></div>
+                    <div class="pro_info">
+                        <a href="javascript:;">比价购买</a>
+                        <a href="javascript:;">产品参数</a>
+                        <a href="javascript:;">评价(2322)</a>
+                        <a href="javascript:;"><img src="http://sf.manmanbuy.com/images/sitelogo/1.png" alt="">
+                            <span>京东商城</span></a>
+                        <a href="javascript:;">￥1199.00 </a>
+                        <a href="javascript:;"><button type="button" class="mui-btn">去购买</button></a>
+                    </div>
+                    <div class="tips">* 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。</div>
+                    <h4 class="evaluate">网友评价</h4>
+
+                </div>
+                <ul class="commentList">
+
+
+                </ul>
+                <div class="mmm_footer">
+                    <div class="footer_nav">
+                        <a href="javascript:;">登录</a>
+                        <a href="javascript:;">注册</a>
+                        <a href="#"><span>↑</span>返回顶部</a>
+                    </div>
+                    <div class="appDownload">
+                        <div>
+                            <a href="javascript:;">手机APP下载</a>
+                            <a href="javascript:;">慢慢买手机版</a>
+                            <span> -- 掌上比价平台</span>
+                        </div>
+                        <div class="appWeb">m.manmanbuy.com </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/template" id="productTemp">
+
+<div class="pro_title">{{result[0].productName}}</div>
+<div class="pro_pic">{{@result[0].productImg}}</div>
+<div class="pro_info">
+    <a href="javascript:;">比价购买</a>
+    <a href="javascript:;">产品参数</a>
+    <a href="javascript:;">评价(2322)</a>
+    <a href="javascript:;"><img src="http://sf.manmanbuy.com/images/sitelogo/1.png" alt="">
+        <span>京东商城</span></a>
+    <a href="javascript:;">￥1199.00 </a>
+    <a href="javascript:;"><button type="button" class="mui-btn">去购买</button></a>
+</div>
+<div class="tips">* 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。</div>
+<h4 class="evaluate">网友评价</h4>
+
+
+</script>
+
+<script type="text/template" id="commentListTemp">
+{{each result value index}}
+<li>
+     <div class="netfriend"><span>{{value.comFrom}}</span><span>{{value.comTime}}</span></div>
+     <div class="shop"><span>{{value.comFrom}}</span></div>
+     <div class="com_content">{{value.comContent}}</div>
+ </li>
+{{/each}}
+</script>
+<script src="../lib/mui/js/mui.min.js"></script>
+<script src="../lib/zepto/zepto.js"></script>
+<script src="../lib/arttemplate/template-web.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/pinpaicomment.js"></script>
+
+</html>

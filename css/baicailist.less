@@ -1,0 +1,151 @@
+@import './base.less';
+
+.layout {
+  width: 100vw;
+  height: 100vh;
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+}
+
+// 头部
+#header {
+  height: 50px;
+  background-color: #ff841d;
+
+  >.mui-icon {
+    color: #fff;
+  }
+
+  >span {
+    font-size: 20px;
+    color: #fff;
+    margin-left: 50px;
+  }
+
+  >.mui-pull-right {
+    >img {
+      width: 30px;
+    }
+  }
+}
+
+
+// 内容
+.content {
+  >.mui-scroll-wrapper{
+    background-color: #fff;
+    overflow: hidden;
+    >.mui-scroll{
+      width: 1000px;
+      >li{
+        float: left;
+        padding: 10px 20px;
+      }
+    }
+  }
+  
+  >.goodsList{
+    >ul{
+      >li{
+        margin: 6px auto;
+        background-color: #ffffff;
+        position: relative;
+        padding: 10px 5px;
+        box-sizing: border-box;
+        overflow: hidden;
+        >a{
+          >.goodsimg {
+            width: 30%;
+            float: left;
+            >img{
+              width: 80%;
+            }
+          }
+
+          >.goodsdesc {
+            float:left;
+            >.goodsname{
+              font-size: 14px;
+            }
+            >.goodsprice{
+              color: red;
+              font-size: 16px;
+              >em{
+                font-size: 12px;
+              }
+              >span{
+                font-size: 20px;
+                padding: 5px;
+              }
+              >del{
+                font-size: 12px;
+                color: #666;
+              }
+            }
+            >.bar{
+              display: flex;
+              >span{
+                font-size: 12px;
+                color: red;
+                border:1px solid red;
+                flex: 2;
+                border-radius: 12px;
+                background-color: pink;
+                text-align: center;
+                margin-right: 10px;
+              }
+              >b{
+                flex: 7;
+                font-size: 12px;
+                color: red;
+              }
+            }
+            >.aa{
+              font-size: 12px;
+              color: red;
+              border:1px dashed red;
+            }
+           
+              
+            }
+          }
+        }
+        
+      }
+    }
+  }
+
+
+
+
+// 底部
+.mmm_footer {
+  >.login {
+    display: block;
+
+    >div {
+      float: left;
+      width: 33.3%;
+      height: 30px;
+      line-height: 30px;
+      border: 1px solid #ccc;
+      text-align: center;
+
+      img {
+        width: 15px;
+      }
+    }
+  }
+
+  .appDown {
+    font-size: 12px;
+    text-align: center;
+
+    >a {
+      color: red;
+    }
+  }
+}

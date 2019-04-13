@@ -1,0 +1,81 @@
+.layout {
+  width: 100vw;
+  height: 100vh;
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  background:#eee;
+  flex-direction: column;
+}
+
+// 头部
+.header{
+  >.logo{
+    float: left;
+    >img{
+      height: 15px;
+    }
+  }
+  >.download{
+    float: right;
+    >img{
+      height: 20px;
+    }
+  }
+}
+// 搜索框
+.search{
+  background: #fff;
+  padding: 10px 10px 30px;
+  height: 40px;
+  // margin-bottom: 8px;
+  >input{
+    text-align:left;
+    height: 24px;
+    width: 83%;
+    background-color: #eee;
+    // margin-bottom: 0;
+  }
+  >button{
+    padding: 3px 3px !important;
+  }
+}
+.header {
+  height: 30px;
+  background: #ff841d;
+  padding: 4px;
+}
+
+.content {
+  flex: 1;
+  overflow: scroll;
+}
+
+
+/* 底部 */
+footer {
+  width: 100%;
+  .row {
+    display: flex;
+
+    div {
+      flex: 1;
+      text-align: center;
+      border: 1px solid #ccc;
+      padding: 5px;
+      font-size: 14px;
+
+      img {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+
+
+  p {
+    margin: 5px 0;
+    text-align: center;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,90 @@
+@import './common_wj.less';
+.slow_content {
+    padding: 0 10px;
+    .ctrgoods_title {
+        height: 80px;
+    }
+    .goodsDetail {
+        text-align: center;
+        img {
+            width: 200px;
+            height: auto;
+            
+        }
+    }
+    .buy {
+        display: inline-block;
+        width: 80%;
+        margin-left: 50%;
+        margin-bottom: 10px;
+        transform: translateX(-50%);
+        text-align: center;
+        background-color: orange;
+        color: #fff;
+        border: 1px solid orange;
+        border-radius: 3px;
+    }
+    .ctrgoods_content_foot {
+        >img {
+           width: 80%;
+           margin-left: 50%;
+           transform: translateX(-50%);
+        }
+        .ui-border-t {
+            margin-top: 20px;
+            .form {
+                position: relative;
+                .ctrl {
+                    position: absolute; ;
+                    right: 0;
+                    bottom: 20px;
+                    .tjdp {
+                        border: 1px solid orange;   
+                        background-color: orange;
+                    }
+                }
+               
+            }
+            .tit {
+                margin-bottom: 10px;
+            }
+            .list {
+                li {
+                    display: flex;
+                    margin-bottom: 20px;
+                    .userimg {
+                        width: 40px;
+                        height: 40px;
+                        overflow: hidden;
+                        border-radius: 50%;
+                        img {
+                            width:100%;
+                            height: auto;
+                        }
+                    }
+                    .con {
+                        flex: 1;
+                        .name {
+                           .username {
+                               float: left;
+                               color: skyblue;
+                               font-size: 14px;
+                           }
+                           .time {
+                               float: right;
+                               font-size: 14px;
+
+                           }
+                        }
+                        .content {
+                            font-size: 14px;
+
+                        }
+                    }
+                }
+               
+            }
+        }
+        
+    }
+}

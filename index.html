@@ -1,12 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./css/index.css">
     <title>慢慢卖，开启你的精彩人生</title>
 </head>
+
 <body>
-    aaa不不不
+    <div class="layout">
+        <!-- 顶部部分 -->
+        <header id="header" class="mui-bar-nav">
+            <a class="app mui-pull-right">
+                <img src="images/header_app.png" alt="">
+            </a>
+            <a class="mui-action-back logo mui-pull-left">
+                <img src="images/header_logo.png" alt="">
+            </a>
+        </header>
+        <div class="search">
+            <form action="">
+                <input type="search" placeholder="请输入要比价的商品">
+                <input type="submit">
+            </form>
+        </div>
+
+        <!-- 内容部分 -->
+        <div class="mmm_content">
+            <div class="mmm_nav clearfix">
+                
+                
+
+            </div>
+            <div class="mmm_goodsList clearfix">
+                <div class="goods_header">
+                    <span>超值折扣推荐</span>
+                    <a href="">
+                        <img src="images/header_app.png" alt="">
+                    </a>
+                </div>
+                <ul class="goods_list">
+                    
+                     
+                </ul>
+            </div>
+        </div>
+        <!-- 底部部分 -->
+        <div class="mmm_footer">
+            <div class="login">
+                <div class="col-xs-4">
+                    <a href="#">登录</a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="#">注册</a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="#">
+                        <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                        返回顶部</a>
+                </div>
+            </div>
+            <div class="appDown">
+                <a href="#">手机APP下载</a>
+                <span>慢慢买手机版</span>
+                <span>- 掌上比价平台</span>
+                <div>m.manmanbuy.com </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/template" id="navTemp">
+    {{each result value index}}
+    <div class="col-xs-3">
+        <a href="./views/{{value.titlehref}}">
+            {{@value.img}}
+            <div>{{value.name}}</div>
+        </a>
+    </div>
+    {{/each}}
+   </script>
+    <script type="text/template" id="goodslistTemp">
+        {{each result v i}}
+        <li>
+            <a class="good_img" href="#">
+                <div class="mui-ellipsis-2" >
+                    {{@v.productImgSm}}
+                </div>
+                <div>
+                    <div>{{v.productName}}</div>
+                    <span>{{v.productPinkage}}</span>
+                    <p>{{v.productFrom}}</p>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+    
+    <script src="./lib/mui/js/mui.min.js"></script>
+    <script src="./lib/zepto/zepto.js"></script>
+     <script src="./lib/arttemplate/template-web.js"></script>
+    <script src="./js/index.js"></script>
 </body>
+
 </html>
+

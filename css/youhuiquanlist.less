@@ -1,0 +1,45 @@
+@import './base.less';
+@import './common.less';
+
+
+.content{
+  >.listtop{
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+  }
+  >.goodslist{
+    margin-top: 20px;
+    >ul{
+      >li{
+        padding: 5px;
+        border-bottom:1px solid #ccc;
+        >a{
+          width: 100%;
+          >.goodsimg{
+            float: left;
+            width: 30%;
+            >img{
+              width: 80%;
+            }
+          }
+          >.goodsdesc{
+            width: 70%;
+            float: left;
+            >.goodsname{
+              font-size: 14px;
+            }
+            >.goodsprice{
+              font-size: 20px;
+              margin: 10px 0;
+            }
+            >.time{
+              font-size: 12px;
+              color: orange;
+            }
+          }
+        }
+      }
+    }
+  }
+}

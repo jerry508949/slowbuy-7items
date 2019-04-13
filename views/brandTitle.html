@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买品牌</title>
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="../lib/mui/css/muie.css">
+    <link rel="stylesheet" href="../css/brandTitle.css">
+
+</head>
+
+<body>
+    <div class="layout">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div class="mmm_header">
+                    <div class="mm_logo"><img src="../images/header_logo.png" alt=""></div>
+                    <div class="appDownload">
+                        <img src="../images/header_app.png" alt="">
+                    </div>
+                </div>
+                <div class="mmm_search">
+                    <div class="mui-input-row mui-search search_text">
+                        <input type="search" class="mui-input-clear" placeholder="请输入商品名称">
+                        <span class="mui-icon mui-icon-search"></span>
+                    </div>
+                    <button type="button" class="mui-btn btn_search">搜索</button>
+                </div>
+                <div class="mmm_nav">
+                    <ul class="navList">
+                        <li><a href="javascript:;">首页 ></a></li>
+                        <li><a href="javascript:;">全部分类 ></a></li>
+                        <li><a href="javascript:;">品牌大全 ></a></li>
+                    </ul>
+                    <div class="hotbrand">
+                        热门品牌排行
+                    </div>
+
+                    <ul class="branlist">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/template" id="brandListTemp">
+    {{each result value index}}
+      <li><a href="pinpaigoodslist.html?brandTitleId={{value.brandTitleId}}">{{value.brandTitle}}</a></li>
+    {{/each}}
+</script>
+
+<script src="../lib/mui/js/mui.min.js"></script>
+<script src="../lib/zepto/zepto.js"></script>
+<script src="../lib/arttemplate/template-web.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/brandTitle.js"></script>
+
+</html>

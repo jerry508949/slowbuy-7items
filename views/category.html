@@ -5,52 +5,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>分类页</title>
-    <link rel="stylesheet" href="../css/base.css"><!-- 初始化文件 -->
+    <title>慢慢买分类页</title>
+    <link rel="stylesheet" href="../css/base.css"><!-- 初始化样式 -->
     <link rel="stylesheet" href="../lib/mui/css/muie.css"><!-- mui扩展字体 -->
-    <link rel="stylesheet" href="../lib/fonctawesome/css/font-awesome.css"><!-- 字体图标 -->
-    <link rel="stylesheet" href="../lib/mui/css/mui.ss"><!-- mui插件 -->
+    <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.css"><!-- 字体图标 -->
+    <link rel="stylesheet" href="../lib/mui/css/mui.css"><!-- mui插件 -->
+    <link rel="stylesheet" href="../css/common_feng.css"><!-- 公共头底部样式 -->
+    <link rel="stylesheet" href="../css/category.css"><!-- 分类数据 -->
 </head>
 
 <body class="eleToggle">
-    <div class="layoyt">
+    <div class="layout">
         <!-- 头部 -->
-        <header id="header" class="mui-bar mui-bar-nav">
-            <h1 class="mui-title">慢慢买</h1>
-        </header>
-        <div class="content">
-             
-
+        <div class="header">
+            <div class="logo"><img src="../images/header_logo.png"></div>
+            <div class="download"><img src="../images/header_app.png"></div>
+        </div>
+        <!-- 搜索框 -->
+        <div class="mui-input-row search">
+            <input type="search" class="mui-input-clear" placeholder="请输入要比价的商品">
+            <button type="button" class="mui-btn mui-btn-warning">搜索</button>
+        </div>
+        <div class="content"  id="abc">
+            <div class="mui-card">
+                <ul class="mui-table-view">
+                    <!-- <li class="mui-table-view-cell mui-collapse categoryall">
+						<a class="mui-navigate-right" href="#">大家电</a>
+						<div class="mui-collapse-content">
+                               <ul class="categorylist">
+                                   <li><a href="Javascript:;">s</a></li>
+                                   <li><a href="Javascript:;">s</a></li>
+                                   <li><a href="Javascript:;">s</a></li>
+                                   <li><a href="Javascript:;">s</a></li>
+                                   <li><a href="Javascript:;">s</a></li>
+                                   <li><a href="Javascript:;">s</a></li>
+                                   <li><a href="Javascript:;">s</a></li>
+                                   <li><a href="Javascript:;">s</a></li>
+                               </ul>
+						</div>
+                    </li> -->
+                </ul>
+            </div>
         </div>
         <!-- 底部 -->
-        <div class="footer">
-            <nav class="mui-bar mui-bar-tab">
-                <a class="mui-tab-item " href="../index.html">
-                    <span class="mui-icon mui-icon-home"></span>
-                    <span class="mui-tab-label">首页</span>
-                </a>
-                <a class="mui-tab-item " href="../views/category.html">
-                    <span class="mui-icon mui-icon-list"></span>
-                    <span class="mui-tab-label">分类</span>
-                </a>
-                <a class="mui-tab-item mui-active" href="../views/cart.html">
-                    <span class="mui-icon-extra mui-icon-extra-cart shoppingICON"></span>
-                    <span class="mui-tab-label shopping ">购物车</span>
-                </a>
-                <a class="mui-tab-item" href="../views/myContent.html">
-                    <span class="mui-icon mui-icon-contact"></span>
-                    <span class="mui-tab-label">我的</span>
-                </a>
-            </nav>
-        </div>
+        <footer>
+            <div class="row">
+                <div>
+                    <a href="#">登录</a>
+                </div>
+                <div>
+                    <a href="#">注册</a>
+                </div>
+                <div>
+                    <a href="#"><img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部</a>
+                </div>
+            </div>
+            <p> <a href="#abc" style="color:red">手机APP下载</a> <a href="#">慢慢买手机版</a> -- 掌上比价平台</p>
+            <p>m.manmanbuy.com </p>
+        </footer>
     </div>
 
+
+    <!-- 大家电 -->
+    <script type="text/template" id="cgallTemp">
+        {{each result value index}}
+        <li class="mui-table-view-cell mui-collapse categoryall">
+                <a class="mui-navigate-right cata" href="#"  data-id='{{value.titleId}}'>{{value.title}}</a>
+                <div class="mui-collapse-content">
+                       <ul class="categorylist">
+                            <li class="cglist">
+                             
+                           </li>
+                       </ul>
+                </div>
+            </li>
+            {{/each}}
+    </script>
+    <!-- 大家电列表中的数据 -->
+    <script type="text/template" id="cgNameTemp1">
+        {{each result v i}}
+        <a href="goodslist.html?categoryId={{v.categoryId}}">{{v.category}}</a>
+        {{/each}}
+    </script>
     <script src="../lib/mui/js/mui.min.js"></script><!-- mui 插件-->
     <script src="../lib/arttemplate/template-web.js"></script><!-- template模板渲染 -->
     <script src="../lib/iscroll/iscroll.js"></script><!-- 滚动插件 -->
     <script src="../lib/zepto/zepto.js"></script><!-- zepto第三方jq -->
-    <script src="../js/common.js"></script><!-- 公共js 基准路径 -->
-    <script src="../js/category.js"></script><!--分类页 -->
+    <script src="../js/common.js"></script><!-- 公用js代码 -->
+    <script src="../js/category.js"></script><!-- 分类页 -->
 </body>
 
 </html>

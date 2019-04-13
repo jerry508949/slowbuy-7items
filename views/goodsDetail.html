@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买商品详情88</title>
+    <link rel="stylesheet" href="../css/base.css"><!-- 初始化样式 -->
+    <link rel="stylesheet" href="../lib/mui/css/muie.css"><!-- mui扩展字体 -->
+    <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.css"><!-- 字体图标 -->
+    <link rel="stylesheet" href="../lib/mui/css/mui.css"><!-- mui插件 -->
+    <link rel="stylesheet" href="../css/common_feng.css"><!-- 公共头底部样式 -->
+    <link rel="stylesheet" href="../css/goodsDetail.css"><!-- 分类详情 -->
+</head>
+
+<body class="eleToggle">
+    <div class="layout">
+        <!-- 头部 -->
+        <div  class="header">
+            <div class="logo"><img src="../images/header_logo.png"></div>
+            <div class="download"><img src="../images/header_app.png"></div>
+        </div>
+        <!-- 搜索框 -->
+        <div class="mui-input-row search">
+            <input type="search" class="mui-input-clear" placeholder="请输入要比价的商品">
+            <button type="button" class="mui-btn mui-btn-warning">搜索</button>
+        </div>
+        <!-- 中间内容 -->
+        <div class="content">
+            <!-- 头部的nav 商品名字 -->
+            <div class="goods_nav"  id="abc">
+                <ul>
+                    <li><a href="Javascript:;">首页></a></li>
+                    <li><a href="Javascript:;">全部分类></a></li>
+                    <li class="cateName"></li>
+                </ul>
+                <button type="button" class="mui-btn">筛选</button>
+            </div>
+            <!-- 商品详情内容 -->
+            <div class="goodsDetail_content">
+                <div class="goodsDetail_title">
+                    <!-- <span>卡西欧/CASIO EX-TR600 1110万像素 数码相机 自拍神器</span> -->
+                </div>
+                <div class="product_img">
+                    <!-- <img class="product_Bimg" src="../images/gengduo.png" alt=""> -->
+                </div>
+                <a href="javascript:setfav(473088);" class="collect_img">
+                    <img src="http://www.zuyushop.com/wap/images/sc.jpg" width="39" height="39">
+                </a>
+            </div>
+            <!-- 选项卡 -->
+            <div class="mui-content">
+                <div style="padding: 10px 10px;">
+                    <div id="segmentedControl" class="mui-segmented-control mui-segmented-control-negative">
+                        <a class="mui-control-item mui-active" href="#item1">
+                            比价购买
+                        </a>
+                        <a class="mui-control-item" href="#item2">
+                            产品参数
+                        </a>
+                        <a class="mui-control-item " href="#item3">
+                            评价(12658)
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div id="item1" class="mui-control-content  mui-active">
+                        <ul class="mui-table-view">
+                        </ul>
+                    </div>
+                    <div id="item2" class="mui-control-content">
+                        <ul class="mui-table-view">
+                        </ul>
+                    </div>
+                    <div id="item3" class="mui-control-content">
+                        <ul class="mui-table-view">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="bjShop">
+                <!-- bjShop -->
+            </div>
+            <div class="note">
+                * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+            </div>
+            <div class="productAll">
+                <div class="product-com-title">
+                    <div>网友评价</div>
+                </div>
+                <div class="product-com-list ">
+                    <ul class="user_product">
+                        <!-- <li>
+                            <div class="clearfix "> 
+                                <span class="pull-left com-name">b***r </span>
+                                <span class="pull-right com-time">2016/10/1 </span>
+                            </div>
+                            <div class="clearfix"> 
+                                <span class="star pull-left com-star"><em class="star5"></em></span>
+                                <span class="pull-right com-from"> 购买自：京东商城 </span>
+                            </div>
+                            <div class="com-content">
+                                使用了一周整体不错，主要是为了看纪录片和足球。装在窗户上有种大鱼缸的感觉哈！清晰度不错色彩也可以，应该说对得起2200的价格！还送了五年乐视会员，看英超所有比赛都free，但乐观乐视内容这块还不太丰富，应为家里也有百事通bestv和小米盒子，比较了下，电影百事通最好，纪录片小米最好，只有体育这块乐视比那两家好，还要多努力啊！电视本身有个不足，音响太差，太山寨了！而且不支持3.5mm接口或红白莲音频输出，害得我折腾半天，必须买光纤音频线
+                            </div>
+                        </li> -->
+                </ul>
+                    <div class="more">
+                        <a class="morein" href="comment.aspx?id=473088">查看更多评价</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 底部 -->
+        <footer>
+            <div class="row">
+                <div>
+                    <a href="#">登录</a>
+                </div>
+                <div>
+                    <a href="#">注册</a>
+                </div>
+                <div>
+                    <a href="#abc"><img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部</a>
+                </div>
+            </div>
+            <p> <a href="#abc" style="color:red">手机APP下载</a> <a href="#">慢慢买手机版</a> -- 掌上比价平台</p>
+            <p>m.manmanbuy.com </p>
+        </footer>
+
+        <!-- 头部的nav 商品名字渲染 -->
+        <script type="text/template" id="cateNameTemp">
+        {{each result v i}}
+        <a href="Javascript:;">{{v.category}}></a>
+            {{/each}}
+    </script>
+
+        <!-- 商品详情渲染 -->
+        <script type="text/template" id="bjShopTemp">
+        {{each result value index}}
+               {{@value.bjShop}}
+            {{/each}}
+    </script>
+        <!-- 标题 -->
+        <script type="text/template" id="titleTemp">
+        {{each result value index}}
+    <span>{{value.productName}}</span>
+            {{/each}}
+    </script>
+        <!-- 图片 -->
+        <script type="text/template" id="product_imgTemp">
+        {{each result value index}}
+       {{@value.productImg}}
+            {{/each}}
+    </script>
+
+        <script type="text/template" id="user_productTemp">
+        {{each result value index}}
+
+                <li>
+                    <div class="clearfix "> 
+                        <span class="pull-left com-name">{{value.comName}} </span>
+                        <span class="pull-right com-time">{{value.comTime}} </span>
+                    </div>
+                    <div class="clearfix"> 
+                        <span class="star pull-left com-star"><em class="star5"></em></span>
+                        <span class="pull-right com-from"> {{value.comFrom}} </span>
+                    </div>
+                    <div class="com-content">
+                        {{value.comContent}}
+                    </div>
+                </li>
+
+            {{/each}}
+    </script>
+        <script src="../lib/mui/js/mui.min.js"></script><!-- mui 插件-->
+        <script src="../lib/arttemplate/template-web.js"></script><!-- template模板渲染 -->
+        <script src="../lib/iscroll/iscroll.js"></script><!-- 滚动插件 -->
+        <script src="../lib/zepto/zepto.js"></script><!-- zepto第三方jq -->
+        <script src="../js/common.js"></script><!-- 公用js代码 -->
+        <script src="../js/goodsDetail.js"></script><!-- 分类页 -->
+</body>
+
+</html>

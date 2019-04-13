@@ -1,0 +1,91 @@
+@import 'base.less';
+
+.layout {
+    width: 100vw;
+    height: 100vh;
+    max-width: 640px;
+    min-width: 320px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+.mmm_header {
+    display: flex;;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #ff841d;
+    .mm_logo {
+        margin-top: 5px;
+        width: 55%;
+        img {
+            width: 100%;
+        }
+    }
+    .appDownload {
+        width: 10%;
+        img {
+            width: 100%;
+        }
+    }
+}
+.mmm_search {
+    height: 44px;
+    display: flex;
+    padding: 5px;
+    justify-content: space-around;
+    .search_text {
+        width: 82%;
+        line-height: 35px;
+        input {
+            border-radius: 20px;
+        }
+        // .mui-icon-search {
+        //     position: absolute;
+        //     top: 6px;
+        //     left: 8px;
+        //     font-size: 22px;
+        // }
+    }
+    .btn_search {
+        width: 15%;
+        height: 100%;
+        background-color: #ff841d;
+        color: aliceblue;
+        border-radius: 20px;
+    }
+}
+.mmm_nav {
+    .navList {
+        background-color: #eee;
+        padding: 10px;
+        display: flex;
+        li {
+            margin-right: 10px;
+            font-size: 14px;
+            &:hover {
+                a {
+                    color:#f00;
+                }
+            }
+        }
+    }
+    .hotbrand {
+        margin: 10px 5px;
+        padding: 10px;
+        background-color: #eee;
+        color: deeppink;
+        border: 1px solid #ddd;
+    }
+    .branlist {
+        padding: 10px 0;
+        padding-top: 0;
+        li {
+            padding: 10px;
+            background-color: #eee;
+            margin-bottom: 3px;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            font-size: 15px;
+        }
+    }
+}

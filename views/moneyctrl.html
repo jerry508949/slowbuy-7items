@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>省钱控商品列表</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../lib/mui/css/mui.css">
+    <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../css/moneyctrl.css">
+</head>
+
+<body>
+    <div class="layout">
+        <div class="slow_header">
+            <h4>省钱控</h4>
+        </div>
+        <div class="slow_content">
+            <div class="productlist">
+            </div>
+            <div class="page">
+                <div class="mui-content-padded pagetotal">
+                    <ul class="mui-pager">
+                        <li>
+                            <a href="javascript:;" class="pre">
+                                上一页
+                            </a>
+                        </li>
+                        <li>
+                            <select class="pageoption">
+                                
+                            </select>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="next">
+                                下一页
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="slow_footer">
+            <div class="nav">
+                <a href="#">登录</a>
+                <a href="#">注册</a>
+                <a href="#">
+                    <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">
+                    返回顶部
+                </a>
+            </div>
+            <div class="app">
+                <a href="#">手机APP下载</a>
+                <a href="#">慢慢买手机版</a>
+                -- 掌上比价平台
+            </div>
+            <p>m.manmanbuy.com </p>
+        </div>
+    </div>
+    <!-- 渲染商品列表模板 -->
+    <script type="text/template" id='goodsListTemp'>
+        {{each result value index}}
+        <div class="media clearfix">
+            <div class="left">
+                {{#value.productImgSm}}
+            </div>
+            <div class="right">
+                <a href="./moneyctrgoods.html?productid={{value.productId}}" class="media_des">{{value.productName}}</a>
+                <div class="media_price">{{value.productPinkage}}包邮</div>
+                <div>
+                    <span>天猫商城 | {{value.productTime}}</span>
+                    <span class="mui-icon mui-icon-chatbubble">5</span>
+                </div>
+
+            </div>
+        </div>
+        {{/each}}
+    </script>
+    <!-- 渲染下拉框模板 -->
+    <script type="text/template" id="optionTemp">
+        {{each list value index}}
+        <option value="{{index+1}}" >{{index+1}}/{{value}}</option>
+        {{/each}}
+    </script>
+    <script src="../lib/mui/js/mui.js"></script>
+    <script src="../lib/zepto/zepto.js"></script>
+    <script src="../lib/arttemplate/template-web.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/moneyctrl.js"></script>
+</body>
+
+</html>
