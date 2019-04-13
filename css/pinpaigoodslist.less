@@ -1,0 +1,65 @@
+@import 'base.less';
+@import 'bandcommon.less';
+
+.mmm_nav {
+    .hotbrand {
+        font-size: 13px;
+        margin: 0;
+        margin-top: 10px;
+    }
+
+    .tvBrand_list {
+        li:nth-of-type(1) {
+            .riking {
+                background: #f00;
+            }
+        }
+
+        li:nth-of-type(2) {
+            .riking {
+                background: #0f0;
+            }
+        }
+
+        li:nth-of-type(3) {
+            .riking {
+                background: #f0f;
+            }
+        }
+
+        li {
+            display: flex;
+            padding-top: 10px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            a {
+                display: flex;
+                .riking {
+                    display: inline-block;
+                    height: 20px;
+                    width: 18px;
+                    margin-right: 10px;
+                    line-height: 20px;
+                    text-align: center;
+                    font-size: 13px;
+                    color: #fff;
+                    background-color: #aaa;
+                }
+    
+                .tvBrand {
+                    h3 {
+                        margin: 0;
+                        font-size: 14px;
+                        font-weight: normal;
+                    }
+    
+                    p {
+                        font-size: 13px;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+

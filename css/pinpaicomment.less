@@ -1,0 +1,81 @@
+@import 'base.less';
+@import 'bandcommon.less';
+
+.mmm_nav {
+    position: relative;
+
+    .btn_search {
+        position: absolute;
+        right: 3px;
+        top: 3px;
+    }
+}
+.mmm_product {
+    padding: 10px;
+    .pro_title {
+        font-size: 16px;
+        text-align: center;
+    }
+    .pro_pic {
+        position: relative;
+        text-align: center;
+        img:nth-of-type(2) {
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            bottom: 0;
+            right: 32px;
+        }
+    }
+    .pro_info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        a {
+            margin: 3px;
+            text-align: center;
+            font-size: 13px;
+            width: 30%;
+        }
+        a:nth-of-type(6) {
+            .mui-btn {
+                color: #fff;
+                font-size: 13px;
+                background-color: #ff841d;
+                border-radius: 10px;
+            }
+        }
+    }
+    .tips {
+        background-image: linear-gradient(yellow,pink);
+        font-size: 13px;
+    }
+    .evaluate {
+        text-align: center;
+        font-size: 16px;
+        font-weight: normal;
+        padding: 10px 0;
+        background-color: #eee;
+        border-top: 3px solid #aaa;
+
+    }
+}
+.commentList {
+    padding: 10px;
+    li {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+        .netfriend {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+        }
+        .shop {
+            text-align: right;
+            font-size: 12px;
+        }
+        .com_content {
+            font-size: 12px;
+        }
+    }
+}
